@@ -1,0 +1,33 @@
+{
+  "name": "browser-date-formatter",
+  "version": "1.0.0",
+  "description": "Format dates real fancy-like in the browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo nope"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeke/browser-date-formatter.git"
+  },
+  "keywords": [
+    "browser",
+    "browserify",
+    "date",
+    "time",
+    "strftime",
+    "format",
+    "relative"
+  ],
+  "author": "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeke/browser-date-formatter/issues"
+  },
+  "homepage": "https://github.com/zeke/browser-date-formatter#readme",
+  "dependencies": {
+    "domready": "^1.0.8",
+    "prettydate": "0.0.1",
+    "relative-date": "^1.1.3"
+  }
+}
