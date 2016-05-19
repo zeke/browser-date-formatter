@@ -1,7 +1,7 @@
 {
   "name": "browser-date-formatter",
   "version": "1.0.0",
-  "description": "Format dates real fancy-like in the browser.",
+  "description": "Format dates real fancy-like in the browser. Good for search engines and humans.",
   "main": "index.js",
   "scripts": {
     "test": "echo nope"
