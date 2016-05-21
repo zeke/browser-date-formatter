@@ -2,7 +2,9 @@
 
 Format dates real fancy-like in the browser. Good for search engines and humans.
 
-Weighs in at 5K, minified and gzipped.
+This was originally implemented on [the npmjs.com website](https://github.com/npm/newww/blob/ec7ed58a3406c2ebd7a121218b99349432d8d575/assets/scripts/date-formatting.js), then proved useful enough to extract into a standalone module.
+
+Weighs in at 4K, minified and gzipped.
 
 ## Installation
 
