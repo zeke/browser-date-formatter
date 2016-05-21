@@ -18,7 +18,7 @@ var formatDates = function () {
       return console.error('Invalid date', el.dataset.date)
     }
 
-    var format = el.dataset.format || '%Y-%m-%d'
+    var format = el.dataset.format || 'relative'
     var result = format === 'relative' ? relative(date) : strftime(date, format)
 
     el.textContent = result

@@ -12,15 +12,22 @@ npm install browser-date-formatter --save
 
 ## Usage
 
-
-Specify `date` and `format` data attributes in your HTML content:
+Specify `date` and `format` data attributes on all HTML elements you want
+formatted:
 
 ```html
-<span data-date="Thu Apr 07 2016 17:00:00 GMT-0700 (PDT)" data-format="relative">
-  Thu Apr 07 2016 17:00:00 GMT-0700 (PDT)
-  (this content will get replaced)
+<span data-date="Thu Apr 07 2016 17:00:00 GMT-0700 (PDT)" data-format="%Y-%m-%d">
+  (whatever you put here will get replaced)
 </span>
 ```
+
+The `date` data attribute should be a stringified representation of a [JavaScript Date
+object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date),
+e.g. `String(new Date())`
+
+The `format` data attribute is optional. If omitted, a human-friendly relative date
+string like "5 minutes ago" is displayed. If specified, the format is expected
+to be a [strftime](http://strftime.org/) pattern, such as `%Y-%m-%d`.
 
 Require and invoke the function in your javascript code:
 
@@ -29,16 +36,8 @@ require('browser-date-formatter')()
 ```
 
 When the DOM is ready, this module finds all elements with a `data-date`
-attribute and converts their text content to the given `data-format`.
-
-## Date Formats
-
-If the value of `data-format` is `relative`, the date will be displayed as a
-human-friendly relative date string like "5 minutes ago". The formatter function
-is executed every five seconds to keep any relative dates fresh.
-
-If the value of `data-format` is anything other than `relative`, it is assumed to
-be a [strftime](http://strftime.org/) pattern, like `%Y-%m-%d`.
+attribute and converts their text content to the given `data-format`. The
+formatter function is executed every 5 seconds to keep relative dates fresh.
 
 ## Usage without browserify
 
