@@ -2,6 +2,8 @@
 
 Format dates real fancy-like in the browser. Good for search engines and humans.
 
+Weighs in at 5K, minified and gzipped.
+
 ## Installation
 
 ```sh
@@ -10,15 +12,17 @@ npm install browser-date-formatter --save
 
 ## Usage
 
-Add some dates to your HTML, specifying `date` and `format` as data attributes:
+
+Specify `date` and `format` data attributes in your HTML content:
 
 ```html
-<time data-date="Thu Apr 07 2016 17:00:00 GMT-0700 (PDT)" data-format="relative">
+<span data-date="Thu Apr 07 2016 17:00:00 GMT-0700 (PDT)" data-format="relative">
   Thu Apr 07 2016 17:00:00 GMT-0700 (PDT)
-</time>
+  (this content will get replaced)
+</span>
 ```
 
-Then in your javascript file:
+Require and invoke the function in your javascript code:
 
 ```js
 require('browser-date-formatter')()
@@ -27,14 +31,26 @@ require('browser-date-formatter')()
 When the DOM is ready, this module finds all elements with a `data-date`
 attribute and converts their text content to the given `data-format`.
 
-If the value of `data-format` is `relative`, the date will be displayed as a
-human-friendly relative date string like "5 minutes ago".
+## Date Formats
 
-If the value of `data-format` is anything other than relative, it is assumed to
+If the value of `data-format` is `relative`, the date will be displayed as a
+human-friendly relative date string like "5 minutes ago". The formatter function
+is executed every five seconds to keep any relative dates fresh.
+
+If the value of `data-format` is anything other than `relative`, it is assumed to
 be a [strftime](http://strftime.org/) pattern, like `%Y-%m-%d`.
 
-The formatter function is executed every five seconds to keep any relative
-dates looking fresh.
+## Usage without browserify
+
+If you're not using browserify in your project, you can use the
+[wzrd.in](http://wzrd.in) hosted version instead:
+
+```html
+<script src="https://wzrd.in/standalone/browser-date-formatter@latest"></script>
+<script>
+  browserDateFormatter()
+</script>
+```
 
 ## Tests
 

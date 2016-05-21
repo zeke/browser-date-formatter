@@ -3,6 +3,7 @@ var strftime = require('prettydate').strftime
 var relative = require('relative-date')
 
 module.exports = function () {
+  formatDates()
   domready(formatDates)
   setInterval(formatDates, 5 * 1000)
 }
