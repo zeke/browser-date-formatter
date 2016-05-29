@@ -1,6 +1,6 @@
 {
   "name": "browser-date-formatter",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Format dates real fancy-like in the browser. Good for search engines and humans.",
   "main": "index.js",
   "scripts": {
