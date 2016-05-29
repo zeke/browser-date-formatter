@@ -19,7 +19,7 @@ formatted:
 
 ```html
 <span data-date="Thu Apr 07 2016 17:00:00 GMT-0700 (PDT)" data-format="%Y-%m-%d">
-  (whatever you put here will get replaced)
+  (any textContent you put here will be replaced with "2016-04-07")
 </span>
 ```
 
