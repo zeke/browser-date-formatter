@@ -11,6 +11,6 @@ tape('formatter', function (t) {
   t.ok($('#default').text().match(/ ago$/), 'uses a relative date string by default')
   t.equal($('#strftime').text(), '2016-04-07', 'supports custom strftime formats')
   t.equal($('#non-iso-input').text(), '2017--03--06', 'properly parses nonstandard input like YYYY-MM-DD')
-  t.end()
   window.close()
+  t.end()
 })

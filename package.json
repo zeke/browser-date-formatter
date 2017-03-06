@@ -4,7 +4,7 @@
   "description": "Format dates real fancy-like in the browser. Good for search engines and humans.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:chrome && npm run test:firefox",
+    "test": "npm run test:chrome && npm run test:firefox && standard && standard-markdown",
     "test:chrome": "browserify test/index.js | smokestack -b chrome | tap-spec",
     "test:firefox": "browserify test/index.js | smokestack -b firefox | tap-spec"
   },
@@ -36,6 +36,8 @@
     "browserify": "^13.0.1",
     "jquery": "^2.2.4",
     "smokestack": "^3.4.1",
+    "standard": "^9.0.0",
+    "standard-markdown": "^2.3.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.1"
   }

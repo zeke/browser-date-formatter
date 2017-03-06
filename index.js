@@ -11,13 +11,15 @@ module.exports = function () {
 var formatDates = function () {
   var dates = document.querySelectorAll('[data-date]')
 
-  Array.prototype.forEach.call(dates, function(el) {
+  Array.prototype.forEach.call(dates, function (el) {
+    var date
+
     // Allow `YYYY-MM-DD` strings as input
     if (el.dataset.date.match(/^\d{4}-\d{2}-\d{2}$/)) {
       var parts = el.dataset.date.split('-')
-      var date = new Date(parts[0], parts[1] - 1, parts[2])
+      date = new Date(parts[0], parts[1] - 1, parts[2])
     } else {
-      var date = new Date(el.dataset.date)
+      date = new Date(el.dataset.date)
     }
 
     if (!date.getFullYear()) {
