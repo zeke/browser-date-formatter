@@ -12,7 +12,7 @@ module.exports = function () {
 var formatDates = function () {
   var dates = document.querySelectorAll('[data-date]')
 
-  Array.prototype.forEach.call(dates, function(el) {
+  Array.prototype.forEach.call(dates, function (el) {
     var date = new Date(el.dataset.date)
 
     if (!date.getFullYear()) {
