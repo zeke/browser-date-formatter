@@ -1,5 +1,5 @@
 var domready = require('domready')
-var strftime = require('prettydate').strftime
+var strftime = require('strftime')
 var relative = require('relative-date')
 
 module.exports = function () {
@@ -27,7 +27,7 @@ var formatDates = function () {
     }
 
     var format = el.dataset.format || 'relative'
-    var result = format === 'relative' ? relative(date) : strftime(date, format)
+    var result = format === 'relative' ? relative(date) : strftime(format, date)
 
     el.textContent = result
   })

@@ -62,9 +62,9 @@ npm test
 
 ## Dependencies
 
-- [domready](https://github.com/ded/domready): modern domready
-- [prettydate](https://github.com/bluesmoon/node-prettydate): Format dates nicely
-- [relative-date](https://github.com/n-johnson/relative-date): Javascript module for outputting relative dates.
+- [domready](https://ghub.io/domready): modern domready
+- [strftime](https://ghub.io/prettydate): Format dates nicely
+- [relative-date](https://ghub.io/relative-date): Javascript module for outputting relative dates.
 
 ## License
 
