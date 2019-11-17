@@ -1,6 +1,6 @@
 {
   "name": "browser-date-formatter",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Format dates real fancy-like in the browser. Good for search engines and humans.",
   "main": "index.js",
   "scripts": {
@@ -41,8 +41,10 @@
     "standard-markdown": "^2.3.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.1"
-  }, 
+  },
   "standard": {
-    "ignore": ["dist.js"]
+    "ignore": [
+      "dist.js"
+    ]
   }
 }
