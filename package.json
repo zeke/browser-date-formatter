@@ -4,7 +4,7 @@
   "description": "Format dates real fancy-like in the browser. Good for search engines and humans.",
   "main": "index.js",
   "scripts": {
-    "build": "browserify index.js > dist.js",
+    "build": "browserify index.js --standalone browser-date-formatter > dist.js",
     "test": "npm run test:chrome && npm run test:firefox && standard && standard-markdown",
     "test:chrome": "browserify test/index.js | smokestack -b chrome | tap-spec",
     "test:firefox": "browserify test/index.js | smokestack -b firefox | tap-spec"
