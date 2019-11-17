@@ -4,6 +4,7 @@
   "description": "Format dates real fancy-like in the browser. Good for search engines and humans.",
   "main": "index.js",
   "scripts": {
+    "build": "browserify index.js > dist.js",
     "test": "npm run test:chrome && npm run test:firefox && standard && standard-markdown",
     "test:chrome": "browserify test/index.js | smokestack -b chrome | tap-spec",
     "test:firefox": "browserify test/index.js | smokestack -b firefox | tap-spec"
@@ -40,5 +41,8 @@
     "standard-markdown": "^2.3.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.1"
+  }, 
+  "standard": {
+    "ignore": ["dist.js"]
   }
 }
