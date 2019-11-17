@@ -44,10 +44,10 @@ formatter function is executed every 5 seconds to keep relative dates fresh.
 ## Usage without browserify
 
 If you're not using browserify in your project, you can use the
-[wzrd.in](http://wzrd.in) hosted version instead:
+[unpkg.com](http://unpkg.com) hosted version instead:
 
 ```html
-<script src="https://wzrd.in/standalone/browser-date-formatter@latest"></script>
+<script src="https://unpkg.com/browser-date-formatter/dist.js"></script>
 <script>
   browserDateFormatter()
 </script>
