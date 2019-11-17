@@ -1,5 +1,3 @@
-require
-
 var domready = require('domready')
 var strftime = require('prettydate').strftime
 var relative = require('relative-date')
